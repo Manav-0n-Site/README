@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadMe Creator-by-manav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Floating decorative vectors -->
+    <div class="floating-vector vector-5">📄</div>
+    <div class="floating-vector vector-6">✨</div>
+    <div class="floating-vector vector-7">📝</div>
+    <div class="floating-vector vector-8">🔮</div>
+    <div class="floating-vector vector-9">🌟</div>
+
+    <header>
+        <div class="header-vectors">
+            <div class="vector vector-1">📖</div>
+            <div class="vector vector-2">✨</div>
+            <div class="vector vector-3">📝</div>
+            <div class="vector vector-4">🔍</div>
+        </div>
+        <h1><i class="fas fa-file-alt"></i> ReadMe Creator</h1>
+        <p class="subtitle">Namaskar Dosto! my name is Manav i made a README file generator to help th user to create the best README file within a couple of minutes.....</p>
+    </header>
+
+    <div class="container">
+        <div class="progress-container">
+            <span>Step 1 of 4</span>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span>25%</span>
+        </div>
+
+        <div class="content">
+            <div class="form-container">
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h2>Tell us about your project</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-name">What's your project name? <span class="badge badge-purple">Required</span></label>
+                        <input type="text" id="project-name" placeholder="e.g. My Awesome App">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-description">Describe it in simple words</label>
+                        <textarea id="project-description" placeholder="This project helps people do amazing things easily..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-features">What cool things can it do? (one per line)</label>
+                        <textarea id="project-features" placeholder="Easy to use\nSaves time\nLooks beautiful"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h2>How to use it</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="installation">How do you set it up?</label>
+                        <textarea id="installation" placeholder="Just download and double-click to run!"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="usage">How do you use it? Give an example</label>
+                        <textarea id="usage" placeholder="1. Open the app\n2. Click the big button\n3. Enjoy the results!"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h2>Help & Improvements</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contributing">Can others help improve it? How?</label>
+                        <textarea id="contributing" placeholder="Yes! Just send me your ideas at myemail@example.com"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="support">How can people get help if they need it?</label>
+                        <textarea id="support" placeholder="Email me at help@myapp.com or message on Twitter @myapp"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h2>Legal & Thanks</h2>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="license">How can others use your project? <span class="badge badge-blue">Recommended</span></label>
+                        <select id="license">
+                            <option value="">Choose an option...</option>
+                            <option value="MIT">Anyone can use it freely</option>
+                            <option value="Apache">Can use but must give credit</option>
+                            <option value="GPL">Can use but must share improvements</option>
+                            <option value="BSD">Similar to MIT</option>
+                            <option value="None">Only with my permission</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="credits">Who helped you or inspired you?</label>
+                        <textarea id="credits" placeholder="My friend Alex for testing\nMy cat for moral support"></textarea>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-outline" id="reset-btn">
+                        <i class="fas fa-redo"></i> Start Over
+                    </button>
+                    <button class="btn" id="generate-btn">
+                        <i class="fas fa-magic"></i> Create My README
+                    </button>
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <h2>Your README Preview</h2>
+                <p>See your documentation take shape as you fill out the form</p>
+                
+                <div class="markdown-preview" id="markdown-preview">
+# Project Name
+Your project description will appear here.
+
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Installation
+How to install your project...
+
+## Usage
+How to use your project...
+
+## License
+This project is licensed under the MIT License.
+                </div>
+                
+                <div class="btn-container" style="justify-content: center; margin-top: 20px;">
+                    <button class="btn" id="download-btn" disabled>
+                        <i class="fas fa-download"></i> Download README.md
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by Manav | ReadMe Creator © 2023 | All rights reserved</p>
+    </footer>
+
+    <!-- Feedback Popup -->
+    <div class="feedback-overlay" id="feedback-overlay">
+        <div class="feedback-popup">
+            <button class="close-feedback" id="close-feedback">&times;</button>
+            <h3>Feedback dede yaaar...........!</h3>
+            <p>We'd love to hear your feedback to make ReadMe Creator even better!</p>
+            <textarea class="feedback-textarea" placeholder="What did you like? What can we improve?" id="feedback-text"></textarea>
+            <div class="feedback-buttons">
+                <button class="btn btn-outline" id="skip-feedback">Skip</button>
+                <button class="btn" id="submit-feedback">Submit Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
