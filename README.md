@@ -10,8 +10,7 @@
 ---
 
 ## 🚀 Live Demo
-🔗 [https://manav-0n-site.github.io/README/](#) *(Add your live link here if hosted)*  
-
+🔗 https://manav-0n-site.github.io/README/
 ---
 
 ## ✨ Features
