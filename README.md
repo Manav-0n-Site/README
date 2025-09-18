@@ -1,3 +1,9 @@
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
+
 # 📄 ReadMe Creator
 
 ![Project Preview](https://img.shields.io/badge/README-Generator-purple?style=for-the-badge&logo=markdown)
